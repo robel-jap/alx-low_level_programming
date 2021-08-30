@@ -1,22 +1,20 @@
-#include <stdlib.h>
 #include <stdio.h>
+#include <stdlib.h>
 #include <time.h>
 
 /**
  * main - Entry point
  *
- *Return: Always 0 (success)
+ * Return: Always 0 (Success)
  */
 
 int main(void)
 {
-  int n;
+	int i;
 
-  for (n = 0; n < 10; n++)
-    printf("%d", n);
+	for (i = 0; i < 10; i++)
+		printf("%d", i);
+	printf("\n");
 
-  printf("\n");
-
-  return(0);
-
+	return (0);
 }
