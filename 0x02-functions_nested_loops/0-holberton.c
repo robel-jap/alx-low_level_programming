@@ -12,7 +12,7 @@ int main(void)
 	while (*word)
 	{
 		_putchar(*word);
-		sh++;
+		word++;
 	}
 	_putchar('\n');
 
