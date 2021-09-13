@@ -2,27 +2,21 @@
 #include <stdio.h>
 
 /**
- * _strpbrk -  a function that searches a string for any of a set of bytes.
- * @s: an input string
- * @accept: an input character with to locate into string s
- * Return:  a pointer to the byte in s that matches one of the bytes in accept,
- * or NULL if no such byte is found
+ * print_diagsums - a function that prints the sum of the two diagonals
+ * of a square matrix of integers.
+ * @a: a square matrix of integers
+ * @size: an input integer with the size of matrix
+ * Return: Nothing
  */
-char *_strpbrk(char *s, char *accept)
+void print_diagsums(int *a, int size)
 {
-	char *start = accept;
+	int i = 0, max = size * size, sum1 = 0, sum2 = 0;
 
-	while (*s)
-	{
-		while (*accept)
-		{
-			if (*accept == *s)
-				return (s);
-			accept++;
-		}
+	for (; i < max; i += size + 1)
+		sum1 += a[i];
 
-		accept = start;
-		s++;
-	}
-	return (NULL);
+	for (i = size - 1; i < max - 1; i += size - 1)
+		sum2 += a[i];
+
+	printf("%d, %d\n", sum1, sum2);
 }
